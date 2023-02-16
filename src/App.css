@@ -1,0 +1,14 @@
+.App {
+   text-align: center;
+   background-image: url('./components/assets/rickandmortybackground.webp');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   height:100vh;
+}
+
+.divRick{
+	display: flex;
+	justify-content: center;
+}
+

@@ -1,0 +1,23 @@
+.divAbout{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   background-color: violet;
+   border-radius: 25px;
+   margin-top: 28px;
+   padding: 10px;
+}
+
+.imgAbout{
+   background-image: url("../assets/gorickyourself.jpg");
+   width: 400px;
+   height: 400px;
+   background-size: cover;
+   border-radius: 200px;   
+}
+
+.textAbout{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}

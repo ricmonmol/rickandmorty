@@ -1,0 +1,53 @@
+.divCard{
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	background: white;
+	border-radius: 5px;
+	margin-bottom: 25px;
+}
+
+.divCard:hover{
+	background: violet;
+}
+
+.divCard:hover .divGenderSpecies{
+	color: #def6ca;
+}
+
+.divBtn{
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.divBtn button{
+	margin: 5px;
+	background: red;
+	color: white;
+}
+
+.divNameImage{
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-start;
+}
+
+.divNameImage h2{
+	position: absolute;
+	z-index:1;
+	color:white;
+	padding: 5px;
+	font-size: smaller;
+	background-color:rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	margin-left: 5px;
+}
+
+.divNameImage img{
+	position: relative;
+} 
+.divGenderSpecies{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}

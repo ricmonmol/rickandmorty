@@ -1,0 +1,24 @@
+.divNav{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.divLink{
+   background-color: rgba(100, 230, 201, 0.8);
+   width: fit-content;
+   padding:10px 0 10px 0;
+   border-radius:10px;
+}
+.link{
+   padding: 10px 10px;
+   text-decoration: none;
+   color: white;
+}
+
+.btnLogout{
+   border: none;
+   background: none;
+   font-size: medium;
+   color: cyan;
+   padding-left:10px;
+}

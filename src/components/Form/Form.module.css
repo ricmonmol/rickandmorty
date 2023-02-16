@@ -1,0 +1,15 @@
+.formBox{
+   background-color: white;
+   width: fit-content;
+   padding: 25px;
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+}
+
+.formBtn{
+   border: none;
+   background-color: palevioletred;
+   color: aliceblue;
+   font-weight: bold;
+}

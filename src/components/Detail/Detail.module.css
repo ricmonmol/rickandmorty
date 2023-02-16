@@ -1,0 +1,26 @@
+.divDetail{
+   display: flex;
+   flex-direction: column;
+}
+
+.divTxtImg{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   background-color: violet;
+   border-radius: 25px;
+   padding: 50px;
+   margin: 20px 10px 20px 10px;
+}
+
+.textDetail{
+
+}
+
+.imgDetail{
+
+}
+
+.btnDetail{
+   margin: auto;
+}
