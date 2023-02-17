@@ -1,0 +1,25 @@
+.pFav{
+   color: aqua;
+   background-color: violet;
+   padding: 25px;
+   border-radius: 15px;
+}
+
+.backTHBtn{
+    background-color: rgba(100, 230, 201, 0.8);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: large;
+    color: white;
+}
+
+.selBtn{
+   margin:25px;
+   border: none;
+   background-color: rgba(100,230,201,0.8);
+   color: white;
+   padding: 10px;
+   border-radius: 8px;
+}

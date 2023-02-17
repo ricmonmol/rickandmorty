@@ -18,9 +18,16 @@
 }
 
 .imgDetail{
-
+   border-radius: 25px;
 }
 
 .btnDetail{
-   margin: auto;
+    background-color: rgba(100, 230, 201, 0.8);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: large;
+    color: white;
+    margin: auto;
 }

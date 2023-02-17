@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { addFavorite, deleteFavorite } from '../../redux/actions.js'
 import { connect } from 'react-redux'
 
-
 export function Card(props) {
    
    const [isFav, setIsFav] = useState(props.fav)
@@ -35,15 +34,15 @@ export function Card(props) {
    
    return (
       <div className={styles.divCard}>
+		 <div className={styles.divBtn}>  
          {
             isFav ? (
-            <button onClick={handleFavorite}>❤️</button>
+            <button className={styles.favBtn}  onClick={handleFavorite}>❤️</button>
             ) : (
-            <button onClick={handleFavorite}>🤍</button>
+            <button className={styles.favBtn}  onClick={handleFavorite}>🤍</button>
             )
          }
-		 <div className={styles.divBtn}>  
-        	 <button onClick={props.onClose}>X</button>
+        	 <button className={styles.divBtnX} onClick={props.onClose}>X</button>
 		 </div>
          <div className={styles.divNameImage}>
             <Link to={`/detail/${props.id}`}>

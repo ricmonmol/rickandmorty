@@ -17,13 +17,18 @@
 
 .divBtn{
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-.divBtn button{
+.divBtnX {
 	margin: 5px;
 	background: red;
 	color: white;
+	padding: 0 8px 0 8px;
+	border-radius: 6px;
+	border: none;
+	font-weight: 900;
 }
 
 .divNameImage{
@@ -50,4 +55,13 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
+}
+
+.favBtn{
+	width: fit-content;
+	border: none;
+	background: none;
+	display: flex;
+	font-size: x-large;
+	margin: 5px 0 5px 5px;
 }

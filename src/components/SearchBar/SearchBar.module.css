@@ -1,9 +1,9 @@
 .btnSearch{
 	color: white;
 	background-color: green;
-	margin-left: 20px;
 	font-weight: bold;
-	border-radius: 10px;
+	border: none;	
+	margin: 0 10px 0 10px;
 }
 
 .divBtn{
@@ -11,4 +11,6 @@
 	background-color: rgba(100, 230, 201, 0.8);
 	border-radius: 7px;
 	width: fit-content;
+	display: flex;
+	align-items: center;
 }

@@ -1,4 +1,5 @@
 import styles from '../Cards/Cards.module.css'
+import styled from './Favorites.module.css'
 import Card from '../Card/Card.jsx'
 import { connect, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router'
@@ -22,11 +23,11 @@ export function Favorites({ myFavorites }){
 	return (
     	<div>
 			<div>
-				<select onClick={handleDispatch} name='order'>
+				<select className={styled.selBtn} onClick={handleDispatch} name='order'>
 					<option value="Ascendente">Ascendente</option>
 					<option value="Descendente">Descendente</option>
 				</select>
-				<select onClick={handleDispatch} name='filter'>
+				<select className={styled.selBtn} onClick={handleDispatch} name='filter'>
 					<option value="Male">Male</option>
 					<option value="Female">Female</option>
 					<option value="Genderless">Genderless</option>
@@ -35,7 +36,7 @@ export function Favorites({ myFavorites }){
 			</div>
 	  		<div className={styles.divCards}>
 				{myFavorites.length === 0 ? (
-					<p>Agrega un favorito</p>
+					<p className={styled.pFav}>Agrega un favorito</p>
 		  		) : (
 				myFavorites.map((c, i) => ( 
 					<Card 
@@ -50,7 +51,7 @@ export function Favorites({ myFavorites }){
 					/>
 				)))}
 		  	</div>
-      		<button onClick={()=>navigate('/home')}>Back to Home</button>
+      		<button className={styled.backTHBtn}  onClick={()=>navigate('/home')}>Back to Home</button>
     	</div>
   	)
 }
