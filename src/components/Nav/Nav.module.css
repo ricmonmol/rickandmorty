@@ -1,12 +1,13 @@
 .divNav{
    display: flex;
    justify-content: space-evenly;
+   padding-top: 25px;
 }
 
 .divLink{
-   background-color: rgba(100, 230, 201, 0.8);
+   background-color: palevioletred;
    width: fit-content;
-   padding:10px 0 10px 0;
+   padding:10px;
    border-radius:10px;
 }
 .link{
@@ -19,6 +20,6 @@
    border: none;
    background: none;
    font-size: medium;
-   color: cyan;
-   padding-left:10px;
+   color: darkgreen;
+   padding-left: 50px;
 }

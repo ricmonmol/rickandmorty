@@ -1,16 +1,25 @@
 .btnSearch{
 	color: white;
-	background-color: green;
-	font-weight: bold;
+	background: none;
 	border: none;	
 	margin: 0 10px 0 10px;
+	font-family: inherit;
+	font-size: medium;
 }
 
 .divBtn{
 	padding: 10px;
-	background-color: rgba(100, 230, 201, 0.8);
+	background-color: palevioletred;
 	border-radius: 7px;
 	width: fit-content;
 	display: flex;
 	align-items: center;
+}
+
+.barSearch{
+	padding: 0;
+	background-color: aliceblue;
+	border-style: solid;
+	border-color: aliceblue;
+	border-radius: 10px;
 }

@@ -1,3 +1,17 @@
+.divForm{
+   padding: 25px;
+}
+
+
+.divInput{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+.divInput p{
+   margin: 0;
+}
+
 .formBox{
    background-color: white;
    width: fit-content;
@@ -5,11 +19,29 @@
    display: flex;
    flex-direction: column;
    margin: auto;
+   border-radius: 15px;
 }
 
 .formBtn{
-   border: none;
    background-color: palevioletred;
    color: aliceblue;
    font-weight: bold;
+   padding: 10px;
+   border-style: solid;
+   border-width: 2px;
+   border-radius: 25px;
+   border-color: palevioletred;
+}
+
+.formBtn:hover {
+   color: palevioletred;
+   background-color: aliceblue;
+   border-style: solid;
+   border-color:palevioletred;
+   border-width: 2px;
+}
+
+.divImg{
+   width:215px;
+   padding-bottom: 20px;
 }

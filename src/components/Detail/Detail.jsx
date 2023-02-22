@@ -43,11 +43,11 @@ return(
   <div className={styles.divDetail}>
     <div className={styles.divTxtImg}>
       <div className={styles.textDetail}>
-	    <h1>{character.name}</h1>
-	    <h2>{character.status}</h2>
-	    <h2>{character.specie}</h2>
-	    <h2>{character.gender}</h2>
-        <p>{character.origin}</p>
+        <h1>Name: {character.name}</h1>
+        <h2>Status: {character.status}</h2>
+        <h2>Specie: {character.specie}</h2>
+        <h2>Gender: {character.gender}</h2>
+        <p>Origin: {character.origin}</p>
       </div>  
       <img className={styles.imgDetail} src={character.image}/>
     </div>  

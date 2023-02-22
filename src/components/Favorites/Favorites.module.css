@@ -1,12 +1,13 @@
 .pFav{
-   color: aqua;
-   background-color: violet;
+   color: black;
+   background-color: white;
    padding: 25px;
-   border-radius: 15px;
+   width: 250px;
+   height: 360px;
 }
 
 .backTHBtn{
-    background-color: rgba(100, 230, 201, 0.8);
+    background-color: rgba(100, 230, 201);
     width: fit-content;
     padding: 10px;
     border-radius: 10px;

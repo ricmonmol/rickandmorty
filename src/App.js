@@ -61,7 +61,7 @@ function App () {
   }
 
   return( 
-    <div className='App' style={{ padding: '25px' }}>
+    <div className='App' style={{ padding: '0'}} > 
       {location.pathname !=='/' && <Nav onSearch={onSearch} random={random} logout={logout}/>}
       <Routes>
         <Route exact path='/' element={<Form login={login} />}/>
