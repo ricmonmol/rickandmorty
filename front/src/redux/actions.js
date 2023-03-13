@@ -1,20 +1,58 @@
 import axios from "axios";
-const { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER } = require("./types.js");
+const {
+  ADD_FAVORITE,
+  DELETE_FAVORITE,
+  GET_FAV,
+  FILTER,
+  ORDER,
+} = require("./types.js");
 
 export function addFavorite(char) {
-  axios.post("http://localhost:3001/rickandmorty/fav", char);
-  return {
-    type: ADD_FAVORITE,
-    payload: char,
-  };
+  try {
+    return async function (dispatch) {
+      const response = axios.post(
+        "http://localhost:3001/rickandmorty/fav",
+        char
+      );
+      const data = await response.data;
+      return dispatch({
+        type: ADD_FAVORITE,
+        payload: data,
+      });
+    };
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 
 export function deleteFavorite(id) {
-  axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`);
-  return {
-    type: DELETE_FAVORITE,
-    payload: id,
-  };
+  try {
+    return async function (dispatch) {
+      axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`);
+      return dispatch({
+        type: DELETE_FAVORITE,
+        payload: id,
+      });
+    };
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export function getFavorite() {
+  try {
+    return async function (dispatch) {
+      const response = await axios.get(
+        "http://localhost:3001/rickandmorty/fav"
+      );
+      return dispatch({
+        type: GET_FAV,
+        payload: response.data,
+      });
+    };
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 
 export function filterCards(status) {
