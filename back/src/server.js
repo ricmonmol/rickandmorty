@@ -1,22 +1,11 @@
-const data = require('./utils/data.js')
-const http = require("http")
+const express = require("express");
+const app = express();
+const PORT = 3001;
+const router = require("./routes/index");
 
-const PORT = 3001
+app.use(express.json());
+app.use("/rickandmorty", router);
 
-http.createServer((req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	if(req.url.includes('rickandmorty/character')){
-	  let idUrl = parseInt(req.url.split('/').at(-1))
-	  let character = data.find(c => c.id === idUrl)
-	  if (character) {
-		res.writeHead(200, {'Content-Type' : 'application/json'})
-		res.end(JSON.stringify(character))
-	  } else {
-		res.writeHead(400, {'Content-Type' : 'text/plain'})
-		res.end('Character not found')
-	  } 
-	} else {
-		res.writeHead(400, {'Content-Type' : 'text/plain'})
-		res.end('Not found')
-	  }
-  }).listen(PORT, 'localhost')
+app.listen(PORT, () => {
+  console.log("Server raised in port " + PORT);
+});
