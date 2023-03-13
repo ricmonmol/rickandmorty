@@ -1,3 +1,3 @@
 const favs = [];
 
-exports.modules = favs;
+module.exports = favs;
