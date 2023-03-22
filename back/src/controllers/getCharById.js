@@ -1,5 +1,5 @@
 const axios = require("axios");
-const URL = "https://rickandmortyapi.com/api/character/";
+const URL = "https://rickandmortyapi.com/api/character";
 
 const getCharById = async (req, res) => {
   const { id } = req.params;
@@ -19,6 +19,4 @@ const getCharById = async (req, res) => {
   }
 };
 
-module.exports = {
-  getCharById,
-};
+module.exports = getCharById;

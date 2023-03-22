@@ -1,16 +1,16 @@
 import styles from '../Cards/Cards.module.css'
 import styled from './Favorites.module.css'
 import Card from '../Card/Card.jsx'
-import { connect, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
 import { filterCards, orderCard } from '../../redux/actions.js'
 
-export function Favorites({ myFavorites }){
+export function Favorites(){
 
 	const navigate = useNavigate()
-		
 	const dispatch = useDispatch()
-	
+	const myFavorites = useSelector((state) => state.myFavorites)
+
 	function handleDispatch(e){
 		if(e.target.name === 'order'){
 			dispatch(orderCard(e.target.value))
@@ -46,8 +46,7 @@ export function Favorites({ myFavorites }){
 					species={c.species}
 					gender={c.gender}
 					image={c.image}
-					fav={true}
-					onClose={false}
+						onClick={false}
 					/>
 				)))}
 		  	</div>
@@ -56,10 +55,12 @@ export function Favorites({ myFavorites }){
   	)
 }
 
-export function mapStateToProps(state){
-  return{
-    myFavorites: state.myFavorites
-  }
-}
+//export function mapStateToProps(state){
+//  return{
+//    myFavorites: state.myFavorites
+//  }
+//}
 
-export default connect(mapStateToProps, null)(Favorites)
+//export default connect(mapStateToProps, null)(Favorites)
+
+export default Favorites

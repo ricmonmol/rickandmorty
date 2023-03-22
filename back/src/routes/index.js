@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
-const { getCharById } = require("../controllers/getCharById");
-const { getCharDetail } = require("../controllers/getCharDetail");
+const getCharById = require("../controllers/getCharById");
+const getCharDetail = require("../controllers/getCharDetail");
 let favs = require("../utils/favs");
 
 router.get("/onsearch/:id", getCharById);
@@ -9,7 +9,7 @@ router.get("/onsearch/:id", getCharById);
 router.get("/detail/:detailid", getCharDetail);
 
 router.get("/fav", (req, res) => {
-  res.status(200).json(res);
+  res.status(200).json(favs);
 });
 
 router.post("/fav", (req, res) => {

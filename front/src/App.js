@@ -35,10 +35,11 @@ function App() {
 
   useEffect(() => {
     !access && navigate("/");
+    // eslint-disable-next-line
   }, [access]);
 
-  function onSearch(character) {
-    fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+  function onSearch(id) {
+    fetch(`http://localhost:3001/rickandmorty/onsearch/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
@@ -56,7 +57,7 @@ function App() {
   }
 
   function random() {
-    let randomId = Math.floor(Math.random() * 4);
+    let randomId = Math.floor(Math.random() * 826);
     onSearch(randomId);
   }
 

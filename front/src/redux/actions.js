@@ -10,16 +10,13 @@ const {
 export function addFavorite(char) {
   try {
     return async function (dispatch) {
-      const response = axios.post(
-        "http://localhost:3001/rickandmorty/fav",
-        char
-      );
-      const data = await response.data;
+      await axios.post("http://localhost:3001/rickandmorty/fav", char);
       return dispatch({
         type: ADD_FAVORITE,
-        payload: data,
+        payload: char,
       });
     };
+    // eslint-disable-next-line
   } catch (error) {
     console.log(error.message);
   }
@@ -28,12 +25,13 @@ export function addFavorite(char) {
 export function deleteFavorite(id) {
   try {
     return async function (dispatch) {
-      axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`);
+      await axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`);
       return dispatch({
         type: DELETE_FAVORITE,
         payload: id,
       });
     };
+    // eslint-disable-next-line
   } catch (error) {
     console.log(error.message);
   }
@@ -50,6 +48,7 @@ export function getFavorite() {
         payload: response.data,
       });
     };
+    // eslint-disable-next-line
   } catch (error) {
     console.log(error.message);
   }
